@@ -11,6 +11,11 @@ export default {
     name: 'Home',
     components: {
         HelloWorld
+    },
+    data() {
+        return {
+            msg: ''
+        };
     }
 };
 </script>
