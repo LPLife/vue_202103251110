@@ -1,6 +1,6 @@
 <template>
     <div class="home">
-        <HelloWorld msg="Welcome to Your Vue.js App" />
+        <HelloWorld msg="Welcome to Your Vue.js App" name="" age="" />
     </div>
 </template>
 
@@ -16,6 +16,9 @@ export default {
         return {
             msg: ''
         };
+    },
+    methods: {
+        handeClick() {}
     }
 };
 </script>
