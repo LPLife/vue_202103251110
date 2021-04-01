@@ -1,8 +1,8 @@
-import Vue from 'vue';
-import App from './App.vue';
-import router from './router';
-import store from './store';
-import './public-path'; // 注意需要引入public-path
+import Vue from "vue";
+import App from "./App.vue";
+import router from "./router";
+import store from "./store";
+import "./public-path"; // 注意需要引入public-path
 
 Vue.config.productionTip = false;
 let instance = null;
@@ -13,7 +13,7 @@ function render(props = {}) {
         router,
         store,
         render: (h) => h(App)
-    }).$mount(container ? container.querySelector('#app') : '#app');
+    }).$mount(container ? container.querySelector("#app") : "#app");
 }
 
 if (!window.__POWERED_BY_QIANKUN__) {
@@ -21,17 +21,17 @@ if (!window.__POWERED_BY_QIANKUN__) {
 }
 
 export async function bootstrap() {
-    console.log('[vue] vue app bootstraped');
+    console.log("[vue] vue app bootstraped");
 }
 
 export async function mount(props) {
-    console.log('[vue] props from main framework', props);
+    console.log("[vue] props from main framework", props);
 
     render(props);
 }
 
 export async function unmount() {
     instance.$destroy();
-    instance.$el.innerHTML = '';
+    instance.$el.innerHTML = "";
     instance = null;
 }
